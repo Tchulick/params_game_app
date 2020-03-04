@@ -1,3 +1,4 @@
 {
-  :message => @message,
+  :name_message => @name_message,
+  message: @message,
 }
