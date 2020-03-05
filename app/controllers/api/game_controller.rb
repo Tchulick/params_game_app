@@ -10,4 +10,17 @@ class Api::GameController < ApplicationController
 
     render "params_game.json.jb"
   end
+
+  def number_game_action
+    correct_num = 56
+    @message = params[:user_number].to_i
+    if @message < correct_num
+      @message = "guess higher"
+    elsif @message > correct_num
+      @message = "guess lower"
+    else
+      @message = "Correct"
+    end
+    render "number_game.json.jb"
+  end
 end
